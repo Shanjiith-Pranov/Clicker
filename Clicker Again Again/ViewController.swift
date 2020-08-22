@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         counter += 1
         if counter == 30 {
             counter = 0
-            performSegue(withIdentifier: "show results", sender: nil)
+            performSegue(withIdentifier: "help", sender: nil)
         } 
 
         
@@ -49,10 +49,10 @@ class ViewController: UIViewController {
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      // Get the new view controller using segue.destination.
      // Pass the selected object to the new view controller.
-        if segue.identifier == "show results" {
-            let resultsViewController = segue.destination as! ResultsViewController
-            resultsViewController.timings.append(currentTime)
-        }
+        if segue.identifier == "help" {
+            let tableviewTableViewController = segue.destination as! tableviewTableViewController
+            tableviewTableViewController.time = currentTime
+             }
      }
  
 }

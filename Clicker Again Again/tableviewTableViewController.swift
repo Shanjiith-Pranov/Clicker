@@ -9,11 +9,30 @@
 import UIKit
 
 class tableviewTableViewController: UITableViewController {
-
+    var timings = [0.0]
+    var time=0.0
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
+        timings = UserDefaults.standard.array(forKey: "timings") as? [Double] ?? []
+
+        //add current time to array
+        timings.append(time)
+        
+        // Sort it
+        timings.sort()
+        
+        //print the timings array
+        print(timings)
+        
+        // Set back the UserDefault value
+        UserDefaults.standard.set(timings, forKey: "timings")
+
+        //Checking if the UserDefaults worked
+        var documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        documentsPath.removeLast(9)
+        documentsPath.append("Library/Preferences/")
+        print("Your plist is at 💁‍♀️: \(documentsPath)")
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -24,23 +43,23 @@ class tableviewTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return UserDefaults.standard.array(forKey: "timings")?.count ?? 0
+        return timings.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        // Configure the cell...
+        cell.textLabel!.text=String(timings[indexPath.row])
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
