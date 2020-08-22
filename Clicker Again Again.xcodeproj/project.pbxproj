@@ -13,6 +13,7 @@
 		32B9AE602309A828003C0A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32B9AE5F2309A828003C0A86 /* Assets.xcassets */; };
 		32B9AE632309A828003C0A86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32B9AE612309A828003C0A86 /* LaunchScreen.storyboard */; };
 		32B9AE6B2309B6B3003C0A86 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B9AE6A2309B6B3003C0A86 /* ResultsViewController.swift */; };
+		84E27F9624F0C918004C1918 /* tableviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E27F9524F0C918004C1918 /* tableviewTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		32B9AE622309A828003C0A86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32B9AE642309A828003C0A86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32B9AE6A2309B6B3003C0A86 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		84E27F9524F0C918004C1918 /* tableviewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableviewTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				32B9AE582309A823003C0A86 /* AppDelegate.swift */,
 				32B9AE5A2309A823003C0A86 /* ViewController.swift */,
 				32B9AE5C2309A823003C0A86 /* Main.storyboard */,
+				84E27F9524F0C918004C1918 /* tableviewTableViewController.swift */,
 				32B9AE5F2309A828003C0A86 /* Assets.xcassets */,
 				32B9AE612309A828003C0A86 /* LaunchScreen.storyboard */,
 				32B9AE642309A828003C0A86 /* Info.plist */,
@@ -141,6 +144,7 @@
 				32B9AE5B2309A823003C0A86 /* ViewController.swift in Sources */,
 				32B9AE592309A823003C0A86 /* AppDelegate.swift in Sources */,
 				32B9AE6B2309B6B3003C0A86 /* ResultsViewController.swift in Sources */,
+				84E27F9624F0C918004C1918 /* tableviewTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
